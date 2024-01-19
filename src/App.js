@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container } from "react-bootstrap";
+import DataTable from "./DataTable";
+import makeData from "./makeData";
 
 function App() {
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "Name",
+        columns: [
+          {
+            Header: "First Name",
+            accessor: "firstName",
+          },
+          {
+            Header: "Last Name",
+            accessor: "lastName",
+          },
+        ],
+      },
+      {
+        Header: "Info",
+        columns: [
+          {
+            Header: "Age",
+            accessor: "age",
+          },
+          {
+            Header: "Visits",
+            accessor: "visits",
+          },
+          {
+            Header: "Status",
+            accessor: "status",
+          },
+          {
+            Header: "Profile Progress",
+            accessor: "progress",
+          },
+        ],
+      },
+    ],
+    []
+  );
+
+  const data = React.useMemo(() => makeData(20), []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="mt-4 wrapper flex-grow-1">
+      <DataTable columns={columns} data={data} />
+    </Container>
   );
 }
 
