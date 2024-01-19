@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add these styles in your CSS or use inline styles in the component */
+.data-view-container {
+  margin-left: -30%;
+  margin-right: -30%;
+}
+
+/* @media (max-width: 960) {
+  .data-view-container {
+    margin-left: -20%;
+    margin-right: -20%;
+  }
+}
+
+@media (max-width: 720) {
+  .data-view-container {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}
+
+@media (max-width: 540) {
+  .data-view-container {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+} */
+
+

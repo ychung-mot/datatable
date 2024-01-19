@@ -12,7 +12,9 @@ const DataTable = ({ columns, data }) => {
       </Row>
       <Row>
         <Col xs={12} style={{ zIndex: 1 }}>
-          <TableView columns={columns} data={data} />
+          <div style={{ marginLeft: "-20%", marginRight: "-20%" }}>
+            <TableView columns={columns} data={data} />
+          </div>
         </Col>
       </Row>
     </>
