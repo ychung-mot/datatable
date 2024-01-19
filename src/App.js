@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import DataTable from "./DataTable";
 import makeData from "./makeData";
 
@@ -46,11 +45,7 @@ function App() {
 
   const data = React.useMemo(() => makeData(20), []);
 
-  return (
-    <Container className="mt-4 wrapper flex-grow-1">
-      <DataTable columns={columns} data={data} />
-    </Container>
-  );
+  return <DataTable columns={columns} data={data} />;
 }
 
 export default App;

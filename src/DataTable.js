@@ -6,13 +6,15 @@ const DataTable = ({ columns, data }) => {
   return (
     <>
       <Row>
-        <Col lg={6} md={6} sm={4}>
-          <h2>Data Tables</h2>
-        </Col>
+        <div className="container mt-4 wrapper flex-grow-1">
+          <Col lg={6} md={6} sm={4}>
+            <h2>Data Tables</h2>
+          </Col>
+        </div>
       </Row>
       <Row>
         <Col xs={12} style={{ zIndex: 1 }}>
-          <div style={{ marginLeft: "-20%", marginRight: "-20%" }}>
+          <div className="container-fluid mt-4 wrapper flex-grow-1">
             <TableView columns={columns} data={data} />
           </div>
         </Col>
