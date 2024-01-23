@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import TableView from "./TableView";
 
-const DataTable = ({ columns, data }) => {
+const DataTable = ({ columns, data, hiddenColumns }) => {
   return (
     <>
       <Row>
@@ -15,7 +15,11 @@ const DataTable = ({ columns, data }) => {
       <Row>
         <Col xs={12} style={{ zIndex: 1 }}>
           <div className="container-fluid mt-4 wrapper flex-grow-1">
-            <TableView columns={columns} data={data} />
+            <TableView
+              columns={columns}
+              data={data}
+              hiddenColumns={hiddenColumns}
+            />
           </div>
         </Col>
       </Row>

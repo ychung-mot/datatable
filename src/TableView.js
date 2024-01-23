@@ -1,9 +1,9 @@
 import React from "react";
 import { useTable } from "react-table";
 
-const TableView = ({ columns, data }) => {
+const TableView = ({ columns, data, hiddenColumns }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
+    useTable({ columns, data, initialState: { hiddenColumns} });
 
   return (
     <table
