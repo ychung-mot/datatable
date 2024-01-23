@@ -79,11 +79,13 @@ function App() {
           Header: "Actions",
           accessor: "actions",
           Cell: ({ row }) => (
-            <button
-              onClick={() => alert(`First Name: ${row.original.firstName}`)}
-            >
-              Show First Name
-            </button>
+            <>
+              <button
+                onClick={() => alert(`First Name: ${row.original.firstName}`)}
+              >
+                Show First Name
+              </button>
+            </>
           ),
         },
       ],

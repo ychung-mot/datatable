@@ -24,13 +24,13 @@ const TableView = ({
   }, [scrollHandler]);
 
   return (
-    <div>
-      <SimpleBar ref={barRef} autoHide={false} style={{ maxHeight }}>
+    <div style={{ position: "relative" }}>
+      <SimpleBar ref={barRef} autoHide={false} style={{ maxHeight, position: "relative" }}>
         <table
           {...getTableProps()}
           style={{ width: "100%", borderCollapse: "collapse" }}
         >
-          <thead style={{ borderBottom: "2px solid #ddd" }}>
+          <thead style={{ borderBottom: "2px solid #ddd", position: "sticky", top: 0, zIndex: 2, background: "#fff" }}>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column, columnIndex) => (
@@ -42,13 +42,9 @@ const TableView = ({
                       fontWeight: "bold",
                       textTransform: "capitalize",
                       borderBottom: "2px solid #ddd",
-                      position:
-                        isFirstColSticky && columnIndex === 0
-                          ? "sticky"
-                          : "static",
+                      position: isFirstColSticky && columnIndex === 0 ? "sticky" : "static",
                       left: isFirstColSticky && columnIndex === 0 ? 0 : "auto",
-                      zIndex:
-                        isFirstColSticky && columnIndex === 0 ? 1 : "auto",
+                      zIndex: isFirstColSticky && columnIndex === 0 ? 1 : "auto",
                       backgroundColor: "#fff", // Add a background color for better visibility
                     }}
                   >
@@ -74,13 +70,9 @@ const TableView = ({
                       style={{
                         padding: "12px",
                         borderBottom: "1px solid #ddd",
-                        position:
-                          isFirstColSticky && cellIndex === 0
-                            ? "sticky"
-                            : "static",
+                        position: isFirstColSticky && cellIndex === 0 ? "sticky" : "static",
                         left: isFirstColSticky && cellIndex === 0 ? 0 : "auto",
-                        zIndex:
-                          isFirstColSticky && cellIndex === 0 ? 1 : "auto",
+                        zIndex: isFirstColSticky && cellIndex === 0 ? 1 : "auto",
                         backgroundColor: "#fff", // Add a background color for better visibility
                       }}
                     >

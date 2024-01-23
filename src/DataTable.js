@@ -19,7 +19,7 @@ const DataTable = ({ columns, data, hiddenColumns }) => {
               columns={columns}
               data={data}
               hiddenColumns={hiddenColumns}
-              isFirstColSticky={true}
+              isFirstColSticky={!hiddenColumns.includes("firstName")}
             />
           </div>
         </Col>
