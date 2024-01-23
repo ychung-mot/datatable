@@ -19,6 +19,7 @@ const DataTable = ({ columns, data, hiddenColumns }) => {
               columns={columns}
               data={data}
               hiddenColumns={hiddenColumns}
+              isFirstColSticky={true}
             />
           </div>
         </Col>
