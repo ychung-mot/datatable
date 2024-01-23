@@ -29,7 +29,16 @@ function App() {
     {
       Header: "Profile Progress",
       accessor: "progress",
-    }
+    },
+    {
+      Header: "Actions",
+      accessor: "actions",
+      Cell: ({ row }) => (
+        <button onClick={() => alert(`First Name: ${row.original.firstName}`)}>
+          Show First Name
+        </button>
+      ),
+    },
   ];
 
   const data = React.useMemo(() => makeData(20), []);
@@ -39,7 +48,11 @@ function App() {
       <button onClick={() => setHideFirstName(!hideFirstName)}>
         Toggle First Name
       </button>
-      <DataTable columns={columns} data={data} hiddenColumns={hideFirstName ? ['firstName'] : []} />
+      <DataTable
+        columns={columns}
+        data={data}
+        hiddenColumns={hideFirstName ? ["firstName"] : []}
+      />
     </div>
   );
 }
