@@ -23,8 +23,44 @@ function App() {
       accessor: "visits",
     },
     {
-      Header: "Status",
-      accessor: "status",
+      Header: "Status1",
+      accessor: "status1",
+    },
+    {
+      Header: "Status2",
+      accessor: "status2",
+    },
+    {
+      Header: "Status3",
+      accessor: "status3",
+    },
+    {
+      Header: "Status4",
+      accessor: "status4",
+    },
+    {
+      Header: "Status5",
+      accessor: "Status5",
+    },
+    {
+      Header: "Status6",
+      accessor: "Status6",
+    },
+    {
+      Header: "Status7",
+      accessor: "Status7",
+    },
+    {
+      Header: "Status8",
+      accessor: "Status8",
+    },
+    {
+      Header: "Status9",
+      accessor: "Status9",
+    },
+    {
+      Header: "Status10",
+      accessor: "Status10",
     },
     {
       Header: "Profile Progress",
